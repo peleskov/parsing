@@ -133,6 +133,5 @@ class FindJobs:
 
 if __name__ == '__main__':
     find_jobs = FindJobs()
-    find_jobs.site['base_url']
     with open(f"result_{find_jobs.site['base_url'].replace('https:', '').replace('.', '_').replace('/', '')}_{find_jobs.text}.json", 'w', encoding='utf-8') as f:
         json.dump(find_jobs.jobs, f, indent=2, ensure_ascii=False)
