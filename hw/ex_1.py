@@ -45,12 +45,12 @@ class FindJobs:
         request_folder = os.path.join(os.path.abspath(os.curdir), 'pages', request_hash.hexdigest())
         print(f"Производим поиск вакансий на сайте: {self.site['base_url']} по ключевому слову: {self.text}")
         if not os.path.exists(request_folder):
+            """Делаем запрос на сайт только если нет таких сохраненных страниц"""
             if not self.__get_pages(request_folder):
                 print(f'Не возможно получить информацию с сайта {self.site["base_url"]}')
         self.jobs = self.__get_data_hh(request_folder) if site_key == 0 else self.__get_data_sj(request_folder)
 
     def __get_pages(self, folder):
-        """Делаем запрос на сайт только если нет таких сохраненных страниц"""
         os.makedirs(folder)
         headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36'}
         next_page = True
