@@ -14,6 +14,7 @@ class FindJobs:
             'attr_np': {'data-qa': 'pager-next'},
             'params': {
                 'area': 1,
+                'items_on_page': 20,
                 'fromSearchLine': 'true',
                 'from': 'suggest_post',
                 'page': 0
