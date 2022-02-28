@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import os.path
 import hashlib
-import json
 from pymongo import MongoClient
 from pprint import pprint
 
