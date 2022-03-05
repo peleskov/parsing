@@ -8,7 +8,6 @@ from selenium.webdriver.chrome.options import Options
 from pymongo import MongoClient
 import hashlib
 from pprint import pprint
-
 import time
 
 client = MongoClient('192.168.1.200', 27017)
@@ -84,6 +83,7 @@ def get_mails():
 
 
 if __name__ == '__main__':
+    '''mvideo вставили captcha, сделать не получилось'''
     get_mails()
     pprint(len(list(MAILS_DB.find({}))))
     # pprint(list(MAILS_DB.find({})))
