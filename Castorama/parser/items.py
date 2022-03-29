@@ -17,7 +17,7 @@ def get_price(value):
 
 def get_chars(chars):
     chars = [c.strip() for c in chars]
-    return {chars[i]: chars[i + 1] for i in range(0, len(chars)-1, 2)}
+    return [(chars[i], chars[i + 1]) for i in range(0, len(chars)-1, 2)]
 
 
 class ParserItem(scrapy.Item):
