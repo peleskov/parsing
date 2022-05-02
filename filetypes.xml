@@ -2,6 +2,7 @@
   <component name="FileTypeManager" version="18">
     <extensionMap>
       <mapping pattern="test" type="AUTO_DETECTED" />
+      <mapping pattern="profile_results" type="AUTO_DETECTED" />
       <mapping ext="csv" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
